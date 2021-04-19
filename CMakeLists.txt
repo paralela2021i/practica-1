@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 2.8)
+project( practica1 )
+find_package( OpenCV REQUIRED )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+add_executable( filtroPosix main.cpp )
+target_link_libraries( filtroPosix ${OpenCV_LIBS} )
+target_link_libraries( filtroPosix pthread )
